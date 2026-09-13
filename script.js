@@ -131,5 +131,76 @@ function configurarFiltros() {
   });
 }
 
+function configurarFormulario() {
+  const formulario = document.querySelector("form");
+  const campos = {
+    nombre: {
+      elemento: formulario.querySelector("#nombre"),
+      validar: (valor) => valor.length >= 3 ? "" : "El nombre debe tener al menos 3 caracteres."
+    },
+    correo: {
+      elemento: formulario.querySelector("#correo"),
+      validar: (valor) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor) ? "" : "Escribe un correo electrónico válido."
+    },
+    telefono: {
+      elemento: formulario.querySelector("#telefono"),
+      validar: (valor) => /^[+\d][\d\s()-]{6,}$/.test(valor) ? "" : "Escribe un teléfono válido."
+    },
+    asunto: {
+      elemento: formulario.querySelector("#asunto"),
+      validar: (valor) => valor.length > 0 ? "" : "El asunto es obligatorio."
+    },
+    mensaje: {
+      elemento: formulario.querySelector("#mensaje"),
+      validar: (valor) => valor.length >= 10 ? "" : "El mensaje debe tener al menos 10 caracteres."
+    }
+  };
+
+  Object.values(campos).forEach(({ elemento }) => {
+    const error = document.createElement("span");
+    error.className = "mensaje-error";
+    error.setAttribute("aria-live", "polite");
+    elemento.insertAdjacentElement("afterend", error);
+  });
+
+  const mensajeExito = document.createElement("p");
+  mensajeExito.className = "mensaje-exito";
+  mensajeExito.setAttribute("role", "status");
+  mensajeExito.hidden = true;
+  formulario.insertAdjacentElement("afterend", mensajeExito);
+
+  formulario.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    mensajeExito.hidden = true;
+
+    let formularioValido = true;
+    let primerCampoConError = null;
+
+    Object.values(campos).forEach(({ elemento, validar }) => {
+      const valor = elemento.value.trim();
+      const mensaje = valor.length === 0 ? "Este campo es obligatorio." : validar(valor);
+      const error = elemento.nextElementSibling;
+
+      error.textContent = mensaje;
+      elemento.setAttribute("aria-invalid", mensaje ? "true" : "false");
+
+      if (mensaje) {
+        formularioValido = false;
+        primerCampoConError = primerCampoConError || elemento;
+      }
+    });
+
+    if (!formularioValido) {
+      primerCampoConError.focus();
+      return;
+    }
+
+    mensajeExito.textContent = "¡Gracias! Tu mensaje fue enviado correctamente.";
+    mensajeExito.hidden = false;
+    formulario.reset();
+  });
+}
+
 mostrarProductos();
 configurarFiltros();
+configurarFormulario();

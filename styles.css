@@ -275,6 +275,28 @@ form textarea {
   transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
+.mensaje-error {
+  min-height: 1.4rem;
+  color: #b42318;
+  font-size: 0.85rem;
+}
+
+form input[aria-invalid="true"],
+form textarea[aria-invalid="true"] {
+  border-color: #b42318;
+}
+
+.mensaje-exito {
+  max-width: 620px;
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid #79b99b;
+  border-radius: 8px;
+  background: #e8f6ed;
+  color: #176b45;
+  font-weight: 700;
+}
+
 form textarea {
   resize: vertical;
 }
