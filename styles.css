@@ -49,6 +49,59 @@ section {
 .categoria {
   flex: 1 1 200px;
 }
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.filtro {
+  padding: 0.6rem 1rem;
+  border: 1px solid #1c1c1c;
+  background-color: #fff;
+  color: #1c1c1c;
+  cursor: pointer;
+}
+
+.filtro.activo,
+.filtro:hover {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+.lista-productos,
+.lista-accesorios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.producto {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.producto img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.producto h4 {
+  margin: 0.75rem 0 0.4rem;
+}
+
+.producto p {
+  margin: 0.4rem 0;
+}
+
+.producto .precio {
+  font-weight: bold;
+}
  
 .categoria img {
   max-width: 100%;

@@ -35,11 +35,20 @@
       <h2>Instrumentos</h2>
       <p>Elige una categoría para ver los instrumentos disponibles.</p>
 
+      <div class="filtros" aria-label="Filtros de productos">
+        <button type="button" class="filtro activo" data-filtro="todos">Todos</button>
+        <button type="button" class="filtro" data-filtro="guitarras">Guitarras</button>
+        <button type="button" class="filtro" data-filtro="bajos">Bajos</button>
+        <button type="button" class="filtro" data-filtro="teclados">Teclados</button>
+        <button type="button" class="filtro" data-filtro="baterias">Baterías</button>
+        <button type="button" class="filtro" data-filtro="accesorios">Accesorios</button>
+      </div>
+
       <div class="categorias">
 
         <article class="categoria" id="guitarras">
           <h3>Guitarras</h3>
-          <img src="assets/guitarra.jpg" alt="Guitarra acústica de cuerpo de madera clara apoyada contra un amplificador">
+          <img src="assets/producto.svg" alt="Guitarra acústica de cuerpo de madera clara apoyada contra un amplificador">
           <div class="lista-productos" data-categoria="guitarras">
             <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
           </div>
@@ -47,7 +56,7 @@
 
         <article class="categoria" id="bajos">
           <h3>Bajos</h3>
-          <img src="assets/bajo.jpg" alt="Bajo eléctrico de cuatro cuerdas color sunburst">
+          <img src="assets/producto.svg" alt="Bajo eléctrico de cuatro cuerdas color sunburst">
           <div class="lista-productos" data-categoria="bajos">
             <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
           </div>
@@ -55,7 +64,7 @@
 
         <article class="categoria" id="teclados">
           <h3>Teclados</h3>
-          <img src="assets/teclado.jpg" alt="Teclado electrónico de 61 teclas sobre un soporte">
+          <img src="assets/producto.svg" alt="Teclado electrónico de 61 teclas sobre un soporte">
           <div class="lista-productos" data-categoria="teclados">
             <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
           </div>
@@ -63,7 +72,7 @@
 
         <article class="categoria" id="baterias">
           <h3>Baterías</h3>
-          <img src="assets/bateria.jpg" alt="Batería acústica completa con platillos y tambores">
+          <img src="assets/producto.svg" alt="Batería acústica completa con platillos y tambores">
           <div class="lista-productos" data-categoria="baterias">
             <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
           </div>
@@ -71,7 +80,7 @@
 
         <article class="categoria" id="viento">
           <h3>Instrumentos de viento</h3>
-          <img src="assets/viento.jpg" alt="Saxofón dorado sobre un fondo neutro">
+          <img src="assets/producto.svg" alt="Saxofón dorado sobre un fondo neutro">
           <div class="lista-productos" data-categoria="viento">
             <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
           </div>
@@ -84,28 +93,7 @@
       <h2>Accesorios</h2>
       <p>Todo lo que necesitas para mantener y complementar tus instrumentos.</p>
 
-      <ul class="lista-accesorios">
-        <li>
-          <img src="assets/cuerdas.jpg" alt="Set de cuerdas nuevas para guitarra sobre una mesa de madera">
-          <h3>Cuerdas</h3>
-        </li>
-        <li>
-          <img src="assets/afinador.jpg" alt="Afinador digital de pinza sujeto al clavijero de una guitarra">
-          <h3>Afinadores</h3>
-        </li>
-        <li>
-          <img src="assets/pedal.jpg" alt="Pedal de efectos para guitarra eléctrica color rojo">
-          <h3>Pedales</h3>
-        </li>
-        <li>
-          <img src="assets/baquetas.jpg" alt="Par de baquetas de madera para batería">
-          <h3>Baquetas</h3>
-        </li>
-        <li>
-          <img src="assets/microfono.jpg" alt="Micrófono de estudio con filtro antipop">
-          <h3>Micrófonos</h3>
-        </li>
-      </ul>
+      <div class="lista-accesorios" data-categoria="accesorios"></div>
     </section>
 
     <section id="nosotros">

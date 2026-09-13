@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="titulo">
+  <title id="titulo">Producto musical de Melody Store</title>
+  <rect width="600" height="400" fill="#f4f1ec"/>
+  <circle cx="300" cy="200" r="120" fill="#1c1c1c"/>
+  <path d="M300 90v190M245 145h110M245 255h110" stroke="#f4f1ec" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="300" cy="200" r="35" fill="#f4f1ec"/>
+  <text x="300" y="350" fill="#1c1c1c" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">Melody Store</text>
+</svg>
