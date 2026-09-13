@@ -131,6 +131,27 @@ function configurarFiltros() {
   });
 }
 
+function configurarMenu() {
+  const botonMenu = document.querySelector(".menu-toggle");
+  const menu = document.querySelector("#menu-principal");
+  const enlacesMenu = menu.querySelectorAll("a");
+
+  function cambiarEstadoMenu(estaAbierto) {
+    menu.classList.toggle("abierto", estaAbierto);
+    botonMenu.setAttribute("aria-expanded", estaAbierto);
+    botonMenu.setAttribute("aria-label", estaAbierto ? "Cerrar menú" : "Abrir menú");
+  }
+
+  botonMenu.addEventListener("click", () => {
+    const estaAbierto = botonMenu.getAttribute("aria-expanded") === "true";
+    cambiarEstadoMenu(!estaAbierto);
+  });
+
+  enlacesMenu.forEach((enlace) => {
+    enlace.addEventListener("click", () => cambiarEstadoMenu(false));
+  });
+}
+
 function configurarFormulario() {
   const formulario = document.querySelector("form");
   const campos = {
@@ -203,4 +224,5 @@ function configurarFormulario() {
 
 mostrarProductos();
 configurarFiltros();
+configurarMenu();
 configurarFormulario();
