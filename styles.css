@@ -195,7 +195,7 @@ section > p {
 .lista-productos,
 .lista-accesorios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -307,6 +307,13 @@ footer p {
   display: none !important;
 }
 
+@media (max-width: 1023px) {
+  .lista-productos,
+  .lista-accesorios {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 720px) {
   header {
     align-items: flex-start;
@@ -327,7 +334,40 @@ footer p {
     padding-bottom: 5rem;
   }
 
+  .lista-productos,
+  .lista-accesorios {
+    grid-template-columns: 1fr;
+  }
+
   .categorias {
     grid-template-columns: 1fr;
+  }
+
+  .filtro,
+  form button {
+    min-height: 44px;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  main > section {
+    width: min(100% - 1.5rem, var(--ancho-contenido));
+  }
+
+  .hero {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.15rem;
+  }
+
+  header nav ul {
+    gap: 0.5rem 0.8rem;
   }
 }
