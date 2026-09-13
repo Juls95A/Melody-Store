@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melody Store - Instrumentos musicales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="#inicio">Melody Store</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#instrumentos">Instrumentos</a></li>
+        <li><a href="#accesorios">Accesorios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <h1>Encuentra el instrumento que va a acompañar tu música</h1>
+      <p>En Melody Store reunimos guitarras, bajos, teclados, baterías e instrumentos de viento para músicos de todos los niveles, desde quienes empiezan hasta quienes tocan en escenarios grandes.</p>
+      <a href="#instrumentos" class="btn-explorar">Explorar instrumentos</a>
+    </section>
+
+    <section id="instrumentos">
+      <h2>Instrumentos</h2>
+      <p>Elige una categoría para ver los instrumentos disponibles.</p>
+
+      <div class="categorias">
+
+        <article class="categoria" id="guitarras">
+          <h3>Guitarras</h3>
+          <img src="assets/guitarra.jpg" alt="Guitarra acústica de cuerpo de madera clara apoyada contra un amplificador">
+          <div class="lista-productos" data-categoria="guitarras">
+            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
+          </div>
+        </article>
+
+        <article class="categoria" id="bajos">
+          <h3>Bajos</h3>
+          <img src="assets/bajo.jpg" alt="Bajo eléctrico de cuatro cuerdas color sunburst">
+          <div class="lista-productos" data-categoria="bajos">
+            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
+          </div>
+        </article>
+
+        <article class="categoria" id="teclados">
+          <h3>Teclados</h3>
+          <img src="assets/teclado.jpg" alt="Teclado electrónico de 61 teclas sobre un soporte">
+          <div class="lista-productos" data-categoria="teclados">
+            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
+          </div>
+        </article>
+
+        <article class="categoria" id="baterias">
+          <h3>Baterías</h3>
+          <img src="assets/bateria.jpg" alt="Batería acústica completa con platillos y tambores">
+          <div class="lista-productos" data-categoria="baterias">
+            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
+          </div>
+        </article>
+
+        <article class="categoria" id="viento">
+          <h3>Instrumentos de viento</h3>
+          <img src="assets/viento.jpg" alt="Saxofón dorado sobre un fondo neutro">
+          <div class="lista-productos" data-categoria="viento">
+            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="accesorios">
+      <h2>Accesorios</h2>
+      <p>Todo lo que necesitas para mantener y complementar tus instrumentos.</p>
+
+      <ul class="lista-accesorios">
+        <li>
+          <img src="assets/cuerdas.jpg" alt="Set de cuerdas nuevas para guitarra sobre una mesa de madera">
+          <h3>Cuerdas</h3>
+        </li>
+        <li>
+          <img src="assets/afinador.jpg" alt="Afinador digital de pinza sujeto al clavijero de una guitarra">
+          <h3>Afinadores</h3>
+        </li>
+        <li>
+          <img src="assets/pedal.jpg" alt="Pedal de efectos para guitarra eléctrica color rojo">
+          <h3>Pedales</h3>
+        </li>
+        <li>
+          <img src="assets/baquetas.jpg" alt="Par de baquetas de madera para batería">
+          <h3>Baquetas</h3>
+        </li>
+        <li>
+          <img src="assets/microfono.jpg" alt="Micrófono de estudio con filtro antipop">
+          <h3>Micrófonos</h3>
+        </li>
+      </ul>
+    </section>
+
+    <section id="nosotros">
+      <h2>Nosotros</h2>
+      <p>Melody Store nació de la idea de acercar instrumentos de buena calidad a músicos reales: estudiantes que están dando sus primeros pasos, bandas que ensayan cada semana y profesionales que buscan renovar su equipo. Trabajamos con marcas confiables y ofrecemos asesoría para que cada persona encuentre el instrumento adecuado para su nivel y su estilo.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes dudas sobre algún instrumento o quieres hacer un pedido especial? Escríbenos.</p>
+
+      <form action="#" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 3001234567">
+
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué quieres hablar?">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Melody Store &mdash; Instrumentos musicales para cada etapa de tu camino.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
