@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrumentos - Melody Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo.png.png" alt="Logo Melody Store">
+        <span>Melody Store</span>
+      </a>
+    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="menu-principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="instrumentos.html">Instrumentos</a></li>
+        <li><a href="accesorios.html">Accesorios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="instrumentos">
+      <h2>Instrumentos</h2>
+      <p>Explora nuestro catálogo de instrumentos musicales.</p>
+
+      <div class="filtros" aria-label="Filtros de productos">
+        <button type="button" class="filtro activo" data-filtro="todos">Todos</button>
+        <button type="button" class="filtro" data-filtro="guitarras">Guitarras</button>
+        <button type="button" class="filtro" data-filtro="bajos">Bajos</button>
+        <button type="button" class="filtro" data-filtro="teclados">Teclados</button>
+        <button type="button" class="filtro" data-filtro="baterias">Baterías</button>
+      </div>
+
+      <div class="categorias">
+        <article class="categoria" id="guitarras">
+          <h3>Guitarras</h3>
+          <img src="img/guitarras.png" alt="Guitarra acústica">
+          <div class="lista-productos" data-categoria="guitarras"></div>
+        </article>
+        <article class="categoria" id="bajos">
+          <h3>Bajos</h3>
+          <img src="img/bajos.png" alt="Bajo eléctrico">
+          <div class="lista-productos" data-categoria="bajos"></div>
+        </article>
+        <article class="categoria" id="teclados">
+          <h3>Teclados</h3>
+          <img src="img/teclado_electronico.png" alt="Teclado electrónico">
+          <div class="lista-productos" data-categoria="teclados"></div>
+        </article>
+        <article class="categoria" id="baterias">
+          <h3>Baterías</h3>
+          <img src="img/baterias.png" alt="Batería acústica">
+          <div class="lista-productos" data-categoria="baterias"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Melody Store &mdash; Instrumentos musicales para cada etapa de tu camino.</p>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>

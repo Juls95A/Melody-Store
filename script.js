@@ -5,7 +5,7 @@ const productos = [
     categoria: "guitarras",
     precio: 1299000,
     descripcion: "Guitarra eléctrica de seis cuerdas para practicar y tocar en vivo.",
-    imagen: "img/guitarra-electrica.svg"
+    imagen: "img/guitarra_electrica.png"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const productos = [
     categoria: "guitarras",
     precio: 749000,
     descripcion: "Guitarra acústica de madera con sonido cálido y equilibrado.",
-    imagen: "img/guitarra-acustica.svg"
+    imagen: "img/guitarra_acustica.png"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const productos = [
     categoria: "bajos",
     precio: 1199000,
     descripcion: "Bajo eléctrico de cuatro cuerdas, ideal para ensayos y escenario.",
-    imagen: "img/bajo-electrico.svg"
+    imagen: "img/bajo_electrico.png"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const productos = [
     categoria: "teclados",
     precio: 899000,
     descripcion: "Teclado digital de 61 teclas con sonidos y ritmos integrados.",
-    imagen: "img/teclado.svg"
+    imagen: "img/teclado.png"
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const productos = [
     categoria: "baterias",
     precio: 2499000,
     descripcion: "Batería acústica completa para comenzar a tocar con tu banda.",
-    imagen: "img/bateria-acustica.svg"
+    imagen: "img/bateria_acustica.png"
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const productos = [
     categoria: "accesorios",
     precio: 329000,
     descripcion: "Micrófono dinámico para voces, ensayos y presentaciones.",
-    imagen: "img/microfono.svg"
+    imagen: "img/microfono.png"
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const productos = [
     categoria: "accesorios",
     precio: 59000,
     descripcion: "Afinador digital de pinza con pantalla fácil de leer.",
-    imagen: "img/afinador.svg"
+    imagen: "img/afinador.png"
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const productos = [
     categoria: "accesorios",
     precio: 249000,
     descripcion: "Pedal compacto para añadir efectos a tu guitarra eléctrica.",
-    imagen: "img/pedal-efectos.svg"
+    imagen: "img/pedalmultiefectos.png"
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const productos = [
     categoria: "accesorios",
     precio: 79000,
     descripcion: "Juego de cuerdas de repuesto para guitarra acústica o eléctrica.",
-    imagen: "img/cuerdas.svg"
+    imagen: "img/cuerdas.png"
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ const productos = [
     categoria: "accesorios",
     precio: 45000,
     descripcion: "Par de baquetas de madera para batería y percusión.",
-    imagen: "img/baquetas.svg"
+    imagen: "img/baquetas.png"
   }
 ];
 
@@ -154,6 +154,10 @@ function configurarMenu() {
 
 function configurarFormulario() {
   const formulario = document.querySelector("form");
+  if (!formulario) {
+    return;
+  }
+
   const campos = {
     nombre: {
       elemento: formulario.querySelector("#nombre"),

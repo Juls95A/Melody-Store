@@ -10,8 +10,8 @@
 
   <header>
     <div class="logo">
-      <a href="#inicio">
-        <img src="img/logo.svg" alt="Logo Melody Store">
+      <a href="index.html">
+        <img src="img/logo.png.png" alt="Logo Melody Store">
         <span>Melody Store</span>
       </a>
     </div>
@@ -22,11 +22,11 @@
     </button>
     <nav id="menu-principal">
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#instrumentos">Instrumentos</a></li>
-        <li><a href="#accesorios">Accesorios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="instrumentos.html">Instrumentos</a></li>
+        <li><a href="accesorios.html">Accesorios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -34,105 +34,25 @@
   <main>
 
     <section id="inicio" class="hero">
-      <span class="hero-kicker">Melody Store / Archivo sonoro 01</span>
-      <div class="hero-cassette" aria-hidden="true"></div>
+      <span class="hero-kicker">Melody Store / Instrumentos musicales</span>
       <h1>Encuentra el instrumento que va a acompañar tu música</h1>
       <p>En Melody Store reunimos guitarras, bajos, teclados, baterías e instrumentos de viento para músicos de todos los niveles, desde quienes empiezan hasta quienes tocan en escenarios grandes.</p>
-      <a href="#instrumentos" class="btn-explorar">Explorar instrumentos</a>
+      <a href="instrumentos.html" class="btn-explorar">Explorar instrumentos</a>
     </section>
 
-    <section id="instrumentos">
-      <h2>Instrumentos</h2>
-      <p>Elige una categoría para ver los instrumentos disponibles.</p>
-
-      <div class="filtros" aria-label="Filtros de productos">
-        <button type="button" class="filtro activo" data-filtro="todos">Todos</button>
-        <button type="button" class="filtro" data-filtro="guitarras">Guitarras</button>
-        <button type="button" class="filtro" data-filtro="bajos">Bajos</button>
-        <button type="button" class="filtro" data-filtro="teclados">Teclados</button>
-        <button type="button" class="filtro" data-filtro="baterias">Baterías</button>
-        <button type="button" class="filtro" data-filtro="accesorios">Accesorios</button>
+    <section class="inicio-info">
+      <div>
+        <span class="hero-kicker">La música empieza aquí</span>
+        <h2>Todo lo que necesitas para encontrar tu sonido</h2>
       </div>
-
-      <div class="categorias">
-
-        <article class="categoria" id="guitarras">
-          <h3>Guitarras</h3>
-          <img src="img/guitarras.svg" alt="Guitarra acústica de cuerpo de madera clara apoyada contra un amplificador">
-          <div class="lista-productos" data-categoria="guitarras">
-            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
-          </div>
-        </article>
-
-        <article class="categoria" id="bajos">
-          <h3>Bajos</h3>
-          <img src="img/bajos.svg" alt="Bajo eléctrico de cuatro cuerdas color sunburst">
-          <div class="lista-productos" data-categoria="bajos">
-            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
-          </div>
-        </article>
-
-        <article class="categoria" id="teclados">
-          <h3>Teclados</h3>
-          <img src="img/teclados.svg" alt="Teclado electrónico de 61 teclas sobre un soporte">
-          <div class="lista-productos" data-categoria="teclados">
-            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
-          </div>
-        </article>
-
-        <article class="categoria" id="baterias">
-          <h3>Baterías</h3>
-          <img src="img/baterias.svg" alt="Batería acústica completa con platillos y tambores">
-          <div class="lista-productos" data-categoria="baterias">
-            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
-          </div>
-        </article>
-
-        <article class="categoria" id="viento">
-          <h3>Instrumentos de viento</h3>
-          <img src="img/viento.svg" alt="Saxofón dorado sobre un fondo neutro">
-          <div class="lista-productos" data-categoria="viento">
-            <!-- Las tarjetas de productos se generarán aquí con JavaScript en una etapa posterior -->
-          </div>
-        </article>
-
+      <div class="inicio-info-texto">
+        <p>En Melody Store reunimos instrumentos y accesorios para estudiantes, bandas y músicos que quieren seguir creciendo. Te ayudamos a elegir según tu nivel, tu estilo y la forma en que quieres tocar.</p>
+        <p>Explora el catálogo, conoce nuestra historia o escríbenos para recibir asesoría antes de comprar.</p>
+        <div class="inicio-enlaces">
+          <a href="instrumentos.html" class="btn-explorar">Ver instrumentos</a>
+          <a href="contacto.html" class="btn-secundario">Pedir asesoría</a>
+        </div>
       </div>
-    </section>
-
-    <section id="accesorios">
-      <h2>Accesorios</h2>
-      <p>Todo lo que necesitas para mantener y complementar tus instrumentos.</p>
-
-      <div class="lista-accesorios" data-categoria="accesorios"></div>
-    </section>
-
-    <section id="nosotros">
-      <h2>Nosotros</h2>
-      <p>Melody Store nació de la idea de acercar instrumentos de buena calidad a músicos reales: estudiantes que están dando sus primeros pasos, bandas que ensayan cada semana y profesionales que buscan renovar su equipo. Trabajamos con marcas confiables y ofrecemos asesoría para que cada persona encuentre el instrumento adecuado para su nivel y su estilo.</p>
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>¿Tienes dudas sobre algún instrumento o quieres hacer un pedido especial? Escríbenos.</p>
-
-      <form action="#" method="post" novalidate>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
-
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
-
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 3001234567">
-
-        <label for="asunto">Asunto</label>
-        <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué quieres hablar?">
-
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
     </section>
 
   </main>
@@ -141,6 +61,6 @@
     <p>Melody Store &mdash; Instrumentos musicales para cada etapa de tu camino.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
