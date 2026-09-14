@@ -7,10 +7,11 @@ musicales y accesorios. La página está pensada para estudiantes, músicos y
 bandas que quieren revisar opciones de equipo de una forma clara y sencilla.
 
 El proyecto muestra los productos con su nombre, descripción, precio e imagen.
-La página principal funciona como una bienvenida a la tienda y cada opción del
-menú abre su propio documento HTML en la misma pestaña. De esta manera, el
-catálogo, los accesorios, la información de la tienda y el formulario de
-contacto. Podria estar en una sola pagina todo redireccionando en esa misma pagina, pero decidi que redireccionara en otras páginas para que se viera mas organizado y más compelto.
+La página principal sirve como bienvenida y desde el menú se puede entrar a las
+demás secciones. Decidí separar Instrumentos, Accesorios, Nosotros y Contacto
+en páginas diferentes porque así la información queda más ordenada y es más
+fácil de revisar. Los enlaces llevan a otra página, pero se mantienen en la
+misma pestaña del navegador.
 
 ## Funcionalidades
 
@@ -51,10 +52,10 @@ Melody-store/
 └── README.md           # Documentación del proyecto
 ```
 
-Todas las páginas cargan `styles.css` y, cuando necesitan comportamiento,
-cargan `script.js`. Las imágenes se encuentran dentro de `img/` y se llaman
-mediante rutas relativas como `img/guitarra_electrica.png`. Esto permite que el
-proyecto funcione igual en local, en GitHub y en Vercel.
+Todas las páginas cargan `styles.css` y las que necesitan funciones cargan
+`script.js`. Las imágenes están dentro de `img/` y se llaman usando rutas
+relativas, por ejemplo `img/guitarra_electrica.png`. Por eso el proyecto puede
+funcionar tanto en local como en GitHub o Vercel.
 
 ## Cómo funciona el sitio
 
@@ -76,7 +77,7 @@ El menú usa enlaces HTML normales:
 - `contacto.html` para Contacto.
 
 Los enlaces no abren ventanas nuevas. El navegador cambia de documento en la
-misma pestaña y todas las rutas son relativas al proyecto.
+misma pestaña y todas las rutas están hechas de forma relativa al proyecto.
 
 ### Catálogo dinámico
 
@@ -103,56 +104,55 @@ de datos porque el proyecto no tiene un backend conectado.
 
 ### ¿Dónde usé Flexbox y dónde Grid?
 
-Usé Flexbox principalmente en el encabezado, el menú, los botones y los filtros.
-En esos lugares los elementos se organizan en una fila o una columna y deben
-acomodarse con facilidad cuando cambia el tamaño de la pantalla. Por ejemplo,
-el menú se muestra horizontalmente en escritorio y se convierte en un menú
-hamburguesa en móvil.
+Usé Flexbox principalmente en el encabezado, el menú, los botones y los
+filtros. En esas partes necesitaba organizar los elementos en filas o columnas
+y hacer que se acomodaran cuando cambiara el tamaño de la pantalla. Por
+ejemplo, el menú se muestra horizontalmente en computador y se convierte en un
+menú hamburguesa en el celular.
 
-Usé Grid para distribuir las categorías y las tarjetas de productos. Grid me
-permitió controlar mejor el número de columnas: en una pantalla grande se pueden
-ver varias tarjetas juntas y en una pantalla pequeña se reducen las columnas
-para que las imágenes y los textos no queden apretados.
+Usé Grid para organizar las categorías y las tarjetas de productos. Me ayudó a
+controlar el número de columnas: en una pantalla grande se ven varias tarjetas
+juntas y en una pantalla pequeña las columnas se reducen para que las imágenes
+y los textos no queden apretados.
 
 ### ¿Qué hace mi JavaScript?
 
-Mi JavaScript se encarga de generar las tarjetas del catálogo a partir de una
-lista de productos. También permite filtrar por categoría, abrir y cerrar el
-menú móvil y validar el formulario de contacto.
+Mi JavaScript genera las tarjetas del catálogo a partir de una lista de
+productos. También sirve para filtrar por categoría, abrir y cerrar el menú
+móvil y validar el formulario de contacto.
 
-La validación revisa que ningún campo obligatorio quede vacío. Además comprueba
-que el nombre tenga una longitud mínima, que el correo tenga un formato válido,
-que el teléfono contenga una estructura aceptable y que el mensaje tenga la
-longitud necesaria. Cuando hay un error, se muestra una indicación junto al
-campo correspondiente y el usuario puede corregirlo sin recargar la página.
-Si los datos cumplen las condiciones, aparece un mensaje de confirmación.
+La validación revisa que los campos no queden vacíos. También comprueba que el
+nombre tenga una longitud mínima, que el correo esté bien escrito, que el
+teléfono tenga un formato válido y que el mensaje sea suficientemente largo.
+Si algo está mal, aparece un mensaje junto al campo para poder corregirlo sin
+recargar la página. Cuando todo está correcto, aparece un mensaje de
+confirmación.
 
 ### ¿Usé inteligencia artificial?
 
-Sí, me apoye de la IA para organizar ciertas partes del código que no se organizaban correctamente,
-debido a que tuve problemas con unas imagenes tambien me apoye en esto un poco mediante una explicación,
-la mejora de la tipografia debido a que la cambie y queria un analisis de cual se veria mejor,
-ordenar correctamente mi documentación.
+Sí, me apoyé en la IA para ordenar algunas partes del código, resolver dudas con
+las rutas de las imágenes, revisar la tipografía y organizar la documentación.
+Yo revisé las sugerencias, escogí los cambios que sí servían para el proyecto,
+agregué las imágenes reales y decidí cómo quería que funcionara la navegación.
 
 ### ¿Qué fue lo más difícil y cómo lo resolví?
 
 Lo más difícil fue organizar la navegación y el catálogo sin repetir el mismo
-contenido en todas las páginas. Primero separé Inicio, Instrumentos,
+contenido en todas las páginas. Para resolverlo, separé Inicio, Instrumentos,
 Accesorios, Nosotros y Contacto en documentos HTML independientes. Después dejé
 los productos en un solo arreglo de JavaScript para que las tarjetas se creen
 automáticamente donde se necesitan.
 
-También fue necesario corregir las rutas de las imágenes, porque el código
-apuntaba a archivos SVG que no estaban en la carpeta `img`. Revisé los nombres
-reales de las imágenes PNG y actualicé las referencias. Finalmente comprobé que
-las rutas fueran relativas para que el sitio funcionara tanto en local como en
-Vercel.
+También tuve que corregir las rutas de las imágenes, porque algunas apuntaban a
+archivos SVG que no existían en `img`. Revisé los nombres reales de las imágenes
+PNG y actualicé las referencias. Al final comprobé que las rutas fueran
+relativas para que el sitio funcionara tanto en local como en Vercel.
 
 ### Diseño responsive y organización de imágenes
 
 El archivo `styles.css` incluye media queries para tablet y móvil. En pantallas
-pequeñas el menú se convierte en un botón hamburguesa, la información se apila
-y las tarjetas ocupan el ancho disponible.
+pequeñas el menú se convierte en un botón hamburguesa, la información se coloca
+en una columna y las tarjetas ocupan el ancho disponible.
 
 Las imágenes se guardan dentro de `img/` y se referencian con sus nombres reales
 en formato PNG. De esta forma no dependen de rutas externas ni de archivos que
