@@ -2,26 +2,25 @@
 
 ## Descripción
 
-Melody Store es una tienda web de instrumentos musicales. Está pensada para
-personas que están empezando a tocar, músicos que ya tienen experiencia y
-bandas que necesitan encontrar instrumentos o accesorios.
+Melody Store es una tienda web de instrumentos musicales y algunos
+accesorios. Está pensada para personas que están aprendiendo, músicos con más
+experiencia y bandas que necesitan revisar opciones para su equipo.
 
-La página reúne los productos en un solo lugar para que sea más fácil revisar
-qué ofrece la tienda, buscar por categoría y enviar una consulta. También
-busca que la información se pueda consultar cómodamente desde un celular.
+La idea es reunir la información básica de los productos en un solo lugar:
+nombre, descripción, precio e imagen. También permite buscar por categoría y
+enviar una consulta desde el formulario de contacto.
 
 ## Funcionalidades
 
-- Catálogo de instrumentos y accesorios con nombre, descripción, precio e
-  imagen.
-- Categorías de guitarras, bajos, teclados, baterías y accesorios.
-- Filtros para mostrar todos los productos o una categoría específica.
+- Catálogo de instrumentos y accesorios con nombre, descripción, precio e imagen.
+- Categorías de guitarras, bajos, teclados, baterías e instrumentos de viento.
+- Filtros para ver todos los productos o solo una categoría.
 - Formulario de contacto con nombre, correo, teléfono, asunto y mensaje.
-- Validación de los datos antes de enviar el formulario.
-- Mensajes de error junto al campo que necesita ser corregido.
-- Mensaje de confirmación cuando el formulario es válido.
-- Diseño responsive para móvil, tablet y escritorio.
-- Menú hamburguesa para facilitar la navegación en pantallas pequeñas.
+- Validación personalizada de los campos del formulario.
+- Mensajes de error cuando falta información o un dato no tiene el formato esperado.
+- Mensaje de confirmación cuando el formulario se completa correctamente.
+- Menú hamburguesa para navegar desde el celular.
+- Diseño responsive para escritorio, tablet y móvil.
 
 ## Tecnologías
 
@@ -33,64 +32,64 @@ busca que la información se pueda consultar cómodamente desde un celular.
 
 ## Estructura del proyecto
 
-- `index.html`: contiene la estructura y las secciones de la página.
-- `styles.css`: contiene los colores, la distribución, las tarjetas y los
-  estilos responsive.
-- `script.js`: contiene los productos, los filtros, la validación del
-  formulario y el menú móvil.
-- `img/`: contiene el logo, las imágenes de categorías y las imágenes individuales de los productos.
-- `README.md`: contiene la información del proyecto.
+- `index.html`: contiene la estructura de la página, el menú, el catálogo y el formulario.
+- `styles.css`: contiene los estilos, la distribución de los elementos y los cambios para pantallas pequeñas.
+- `script.js`: contiene los productos, los filtros, la validación del formulario y el menú responsive.
+- `img/`: contiene el logo, las imágenes de las categorías y las imágenes de los productos.
+- `README.md`: contiene la información general del proyecto.
 
 ## Decisiones técnicas
 
 ### 1. ¿Dónde se utilizó Flexbox y por qué?
 
-Se utilizó Flexbox en el header, la navegación, los filtros y algunos botones.
-Lo elegí porque permite ordenar los elementos en fila o columna y acomodarlos
-cuando cambia el tamaño de la pantalla.
+Se utilizó Flexbox principalmente en el encabezado, la navegación, los
+botones y los filtros. Sirve para ordenar los elementos y hacer que se
+acomoden mejor cuando cambia el ancho de la pantalla.
 
 ### 2. ¿Dónde se utilizó Grid y por qué?
 
-Se utilizó Grid en el catálogo de productos. Así las tarjetas pueden estar
-organizadas en varias columnas en una pantalla grande y pasar a menos columnas
-en tablet o móvil.
+Se utilizó Grid para organizar las categorías y las tarjetas de productos.
+Así se pueden mostrar varias columnas en escritorio y reducirlas en pantallas
+más pequeñas.
 
 ### 3. ¿Qué hace JavaScript?
 
-JavaScript genera las tarjetas del catálogo, permite filtrar los productos,
-valida el formulario y controla la apertura y el cierre del menú hamburguesa.
+JavaScript crea las tarjetas del catálogo, aplica los filtros, valida el
+formulario y abre o cierra el menú hamburguesa.
 
 ### 4. ¿Cómo funciona el catálogo dinámico?
 
-Los productos están guardados en un arreglo de objetos dentro de `script.js`.
-JavaScript recorre ese arreglo y crea las tarjetas directamente en el DOM.
-Cuando se pulsa un filtro, muestra solamente los productos de esa categoría.
+Los productos están guardados en un arreglo dentro de `script.js`. JavaScript
+recorre ese arreglo y crea las tarjetas en la página. Al seleccionar un filtro,
+solo deja visibles los productos de la categoría elegida.
 
 ### 5. ¿Cómo funciona la validación?
 
-Al intentar enviar el formulario, JavaScript revisa que los campos no estén
-vacíos, que el nombre y el mensaje tengan una longitud mínima, que el correo
-tenga un formato válido y que el teléfono tenga un formato razonable. Si hay
-un error, aparece un mensaje junto al campo correspondiente. Si todo está bien,
-se muestra un mensaje de confirmación sin recargar la página.
+Cuando se intenta enviar el formulario, JavaScript revisa que los campos no
+estén vacíos. También comprueba el formato del correo, el teléfono y la
+longitud mínima del nombre y del mensaje. Si hay un error, lo muestra junto al
+campo correspondiente. Si todo está correcto, aparece un mensaje de éxito sin
+recargar la página.
 
 ### 6. ¿Qué fue lo más difícil?
 
-Lo más difícil fue lograr que el catálogo y el formulario funcionaran sin
-escribir cada tarjeta manualmente y sin que el diseño se dañara en pantallas
-pequeñas.
+Lo más difícil fue coordinar el catálogo, los filtros y el formulario sin
+repetir mucho código. También fue necesario cuidar que el menú funcionara bien
+en pantallas pequeñas.Además de organizar correctamente las imagenes.
 
 ### 7. ¿Cómo se solucionó?
 
-Se separaron los productos en un arreglo y se crearon las tarjetas con
-JavaScript. Para el diseño se usaron Grid, Flexbox y media queries. También se
-probaron distintos tamaños de pantalla y diferentes datos en el formulario.
+Se guardaron los productos en un solo arreglo y se crearon las tarjetas desde
+JavaScript. Para el menú y los filtros se usaron eventos `click`, y para el
+formulario se usó el evento `submit`. El diseño se ajustó con Flexbox, Grid y
+media queries.
 
 ## Uso de IA
 
-Se utilizó IA como apoyo durante el desarrollo para revisar ideas, detectar
-errores y ayudar a organizar algunas partes del código. Las decisiones finales
-se revisaron y se probaron dentro del proyecto.
+La IA se utilizó como apoyo para corregir ciertos códigos que no estaban bien
+organizados, proponer recomendaciones para que el código quedara más claro y
+ayudar a diseñar el logo de la empresa. Los cambios finales se revisaron y se
+adaptaron al proyecto.
 
 ## Sitio publicado
 
