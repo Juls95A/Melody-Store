@@ -93,7 +93,7 @@ adaptaron al proyecto.
 
 ## Sitio publicado
 
-URL de Vercel: _(pendiente de agregar)_
+URL de Vercel: [Melody-Store](https://github.com/Juls95A/Melody-Store.git)
 
 ## Capturas
 
@@ -101,10 +101,10 @@ URL de Vercel: _(pendiente de agregar)_
 
 Agregar aquí la captura de la versión de escritorio:
 
-`[captura-escritorio.png]`
+![WEB](image.png)
 
 ### Móvil
 
 Agregar aquí la captura de la versión móvil:
 
-`[captura-movil.png]`
+![MOVIL](<WhatsApp Image 2026-09-13 at 9.35.21 PM.jpeg>)
